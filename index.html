@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A lightweight landing page for recent AI paper summaries."
+    />
+    <title>Signal Papers</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="Primary navigation">
+        <a class="brand" href="#" aria-label="Signal Papers home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Signal Papers</span>
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#papers">Papers</a>
+          <a href="#method">Method</a>
+          <a href="#briefing">Briefing</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Recent research, distilled</p>
+            <h1 id="hero-title">Three AI papers worth your next deep read.</h1>
+            <p class="hero-lede">
+              Concise paper notes for builders tracking agents, embodied AI,
+              and evaluation methods without a heavy product layer.
+            </p>
+            <div class="signal-strip" aria-label="Summary highlights">
+              <div>
+                <strong>12 min</strong>
+                <span>to scan the set</span>
+              </div>
+              <div>
+                <strong>4 lenses</strong>
+                <span>question, method, evidence, impact</span>
+              </div>
+              <div>
+                <strong>0 login</strong>
+                <span>static and immediate</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="#papers">Read summaries</a>
+              <a class="button ghost" href="#method">View method</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Animated research signal map">
+            <canvas id="signal-canvas" width="720" height="560"></canvas>
+            <div class="visual-panel">
+              <span class="panel-kicker">Weekly scan</span>
+              <strong>3</strong>
+              <span>selected reads from a wider research queue</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section intro-grid" id="method" aria-label="Summary method">
+          <div>
+            <p class="eyebrow">Editorial filter</p>
+            <h2>Fast notes for people building with AI.</h2>
+          </div>
+          <div class="method-copy">
+            <p>
+              Each summary highlights the research question, core mechanism,
+              evidence, and practical consequence. No accounts, backend, CMS, or
+              full publication workflow.
+            </p>
+            <ul class="method-list" aria-label="Summary criteria">
+              <li>Is the idea technically meaningful?</li>
+              <li>Can a builder act on the finding?</li>
+              <li>Does the evidence change a design choice?</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section papers-section" id="papers" aria-labelledby="papers-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Latest papers</p>
+              <h2 id="papers-title">Recent 3</h2>
+            </div>
+            <a class="text-link" href="#briefing">Get the next briefing</a>
+          </div>
+          <div class="paper-list" id="paper-list"></div>
+        </section>
+
+        <section class="section briefing" id="briefing" aria-label="Briefing signup">
+          <div>
+            <p class="eyebrow">Lightweight page</p>
+            <h2>A static briefing surface with room to grow.</h2>
+          </div>
+          <form class="briefing-form">
+            <label for="email">Email</label>
+            <div class="input-row">
+              <input id="email" name="email" type="email" placeholder="you@example.com" />
+              <button type="submit">Notify me</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
